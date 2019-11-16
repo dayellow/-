@@ -1,0 +1,52 @@
+1.enable 	（从用户切换特权命令模式）
+2.disable	（从特权返回到用户模式）
+3.configure terminal	（全局配置模式）
+4.exit	（返回）
+5.line console 0	(全局下进入线路控制台配置模式)
+6.password 密码	（5或7命令后设置用户或vty密码）
+7.line vty 0 15	（进入虚拟终端管理界面）
+8.interface vlan 1	（全局上，SSH。Telnet远程接口子配置模式）
+   interface 接口名称		（配置该接口）
+20.description 标签	（给端口记上标签	路由）
+9.ip address ip地址 子网掩码	（输入上述命令后，给交换机等终端的接口配置地址）
+27.ipv6 unicast-routing	（全局下此命令使路由器可以转发ipv6数据包）
+25.ipv6 address ipv6全局单播地址/前缀长度	（进入该接口后配置ipv6全局单播地址）
+10.no shutdown	（9或25命令后，启用该虚拟接口）
+11.banner motd # 起始标语 #	（全局下配置起始标语）
+12.copy running-config startup-config	（特权模式下保存修改）
+13.erase startup-config	（特权模式下删除启动配置）
+14.end或ctrl+Z	（直接返回特权）
+15.enable secret 密码	（全局设置特权密码，已弱加密）
+16.login	（6命令后，都要有这个命令来启用）
+17.service password-encryption	（对所有未加密的密码进行弱加密，password命令下的密码都未加密）
+18.show run 	（特权下，展示运行）
+19.show ip interface brief	(特权下，显示ip接口摘要信息)
+21.show ip route 	（显示存储在 RAM 中的 IPv4 路由表的内容）
+22.show interfaces  	（显示设备上所有接口的统计信息）
+show interfaces 端口名称 （显示该端口信息）
+23.show ip interface 	（显示路由器上所有接口的 IPv4 统计信息）
+24.ip default-gateway ipv4地址	（为交换机配置默认网关）
+26.ipv6 address ipv6本地链路地址 link-local	（为该接口配置本地链路地址）
+28.route print	(cmd显示主机路由表）
+29.ipconfig	（cmd显示此电脑ip地址）
+	   /all	(查看 MAC 地址和有关设备第 3 层编址的许多细节)
+	   /displaydns	(显示所有 DNS 缓存条目)
+30.netstat -n	（cmd可列出正在使用的协议、本地地址和端口号、外部地址和端口号以及连接的状态。）
+31.nslookup	（cmd显示为主机配置的默认 DNS 服务器）
+32.hostname 主机名	（全局下更改主机名）
+33.ip domain-name 域名	（全局下命令配置网络的 IP 域名）
+34.使用强密码创建您选择的用户。
+RTA(config)# username any_user password any_password
+35.生成 1024 位 RSA 密钥。
+注意：在 Packet Tracer 中，输入 crypto key generate rsa 命令，然后按 Enter 键继续。
+RTA(config)# crypto key generate rsa
+36.两分钟内四次登录失败的用户，登录受限三分钟。
+RTA(config)# login block-for 180 attempts 4 within 120·        
+配置 VTY 线路进行 SSH 访问并使用本地用户配置文件进行身份验证。
+RTA(config)# line vty 0 4
+RTA(config-line)# transport input ssh
+RTA(config-line)# login local 
+将配置保存到 NVRAM。
+37.tracert ip4地址	（cmd计算机上跟踪改地址路径）
+     traceroute ip4地址	（cmd路由器上跟踪改地址路径）
+38.arp -a	(cmd显示所有arp缓存）

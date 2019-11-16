@@ -1,0 +1,23 @@
+git init  	（初始化仓库）
+git add .  	(将此文件夹中文件关联起来）
+git commit -m '文件名'	（将文件提交到本地git仓库）
+git tag 标签名（将该文件打上标签）
+git tag 显示所有标签文件
+git tag -d 标签名	（撤销该标签）
+git remote add origin  github仓库网址	（将远程github仓库关联）
+git push -u origin master	（将文件提交到远程仓库）
+git push --tags	（将标签提交到远程仓库）
+git log	（显示提交记录）
+git reset commit序号	（转换为版本为该序号的文件，从提交记录可查到）
+git reset --hard commit序号	（强制转换为版本为该序号的文件）
+git checkout 标签名		（切换为该标签名的文件）
+git status	（检查状态）
+git clone github代码网址	（将github代码克隆在该文件夹中）
+cd 文件本地地址	（进入该文件目录）
+
+/*将文件夹上传到github*/
+git clone github仓库地址	//把github上面的仓库克隆到本地
+git add .	//把项目文件夹下面的文件都添加进来
+git commit -m "你的信息"	//提交说明，准备提交暂存区中的更改的已跟踪文件
+git push -u origin master	//把本地仓库push到github上面
+ok了

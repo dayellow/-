@@ -1,0 +1,6 @@
+sqlplus	(进入sql命令模式）
+c##dadadayellow
+qazplmwsx0222
+sqlplus / as sysdba	（直接以sys登录）
+
+db的管理口令要大小写和数字
